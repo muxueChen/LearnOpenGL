@@ -81,6 +81,7 @@ int main(int argc, const char * argv[]) {
     glBindVertexArray(0);
 
     while (!glfwWindowShouldClose(window)) {
+        procesInput(window);
         glClearColor(0.2, 0.2, 0.3, 1.0);
         glClear(GL_COLOR_BUFFER_BIT);
         shader->use();
@@ -88,6 +89,7 @@ int main(int argc, const char * argv[]) {
         glDrawArrays(GL_TRIANGLES, 0, 3);
         glfwSwapBuffers(window);
         glfwPollEvents();
+        
     }
     
     std::cout << "Hello, World!\n";
