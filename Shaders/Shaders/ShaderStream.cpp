@@ -16,27 +16,36 @@ ShaderStream:: ShaderStream() {
 
 char * ShaderStream:: vertexStream() {
     return SHADER_SRC(
-                      \#version 330 core\n
-                      layout (location = 0) in vec3 aPos;
-                      layout (location = 1) in vec3 aColor;
+        \#version 330 core\n
+        layout (location = 0) in vec3 aPos;
+        layout (location = 1) in vec3 aColor;
+        layout (location = 2) in vec2 aTexCoord;
 
-                      out vec3 ourColor;
+        out vec3 ourColor;
+        out vec2 TexCoord;
 
-                      void main()
-                      {
-                          gl_Position = vec4(aPos, 1.0);
-                          ourColor = aColor;
-                      }
-            );
+        void main() {
+            gl_Position = vec4(aPos, 1.0);
+            ourColor = aColor;
+            TexCoord = aTexCoord;
+        }
+    );
 }
 
 char * ShaderStream:: fragmentStream() {
     return SHADER_SRC(
-                      \#version 330 core\n
-                      out vec4 FragColor;
-                      in vec3 ourColor;
-                      void main() {
-                          FragColor = vec4(ourColor, 1.0);
-                      }
+        \#version 330 core\n
+        out vec4 FragColor;
+        in vec3 ourColor;
+        in vec2 TexCoord;
+        uniform sampler2D texture1;
+        uniform sampler2D texture2;
+
+        void main() {
+//            FragColor = vec4(ourColor, 1.0);
+//            FragColor = texture(ourTexture, TexCoord);
+//            FragColor = texture(ourTexture, TexCoord) * vec4(ourColor, 1.0);
+            FragColor = mix(texture(texture1, TexCoord), texture(texture2, TexCoord), 0.2);
+        }
     );
 }

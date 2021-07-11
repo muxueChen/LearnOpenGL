@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD21681D2698B95D00AF75C0 /* ShaderStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD2168192698B95C00AF75C0 /* ShaderStream.cpp */; };
+		FD21681E2698B95D00AF75C0 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD21681B2698B95C00AF75C0 /* Shader.cpp */; };
+		FD216822269ADEA200AF75C0 /* container.jpeg in CopyFiles */ = {isa = PBXBuildFile; fileRef = FD21681F2698BC2C00AF75C0 /* container.jpeg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FD2BE4DB2692A75D00E3E1E0 /* stb_vorbis.c in Sources */ = {isa = PBXBuildFile; fileRef = FD2BE4CC2692A75D00E3E1E0 /* stb_vorbis.c */; };
 		FDF122C526900A080075E09C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDF122C426900A080075E09C /* main.cpp */; };
 		FDF122CD26900A5E0075E09C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF122CC26900A5E0075E09C /* OpenGL.framework */; };
@@ -22,12 +25,20 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
+				FD216822269ADEA200AF75C0 /* container.jpeg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD2168182698B95C00AF75C0 /* ShaderStreamInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderStreamInterface.h; path = ../../Shaders/Shaders/ShaderStreamInterface.h; sourceTree = "<group>"; };
+		FD2168192698B95C00AF75C0 /* ShaderStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderStream.cpp; path = ../../Shaders/Shaders/ShaderStream.cpp; sourceTree = "<group>"; };
+		FD21681A2698B95C00AF75C0 /* ShaderStream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShaderStream.hpp; path = ../../Shaders/Shaders/ShaderStream.hpp; sourceTree = "<group>"; };
+		FD21681B2698B95C00AF75C0 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = ../../Shaders/Shaders/Shader.cpp; sourceTree = "<group>"; };
+		FD21681C2698B95C00AF75C0 /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Shader.hpp; path = ../../Shaders/Shaders/Shader.hpp; sourceTree = "<group>"; };
+		FD21681F2698BC2C00AF75C0 /* container.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpeg; sourceTree = "<group>"; };
+		FD216825269B164F00AF75C0 /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
 		FD2BE4C22692A75D00E3E1E0 /* UFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFImage.h; sourceTree = "<group>"; };
 		FD2BE4C42692A75D00E3E1E0 /* stb_c_lexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_c_lexer.h; sourceTree = "<group>"; };
 		FD2BE4C52692A75D00E3E1E0 /* stb_image_write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_write.h; sourceTree = "<group>"; };
@@ -125,6 +136,13 @@
 		FDF122C326900A080075E09C /* Texture */ = {
 			isa = PBXGroup;
 			children = (
+				FD216825269B164F00AF75C0 /* awesomeface.png */,
+				FD21681F2698BC2C00AF75C0 /* container.jpeg */,
+				FD21681B2698B95C00AF75C0 /* Shader.cpp */,
+				FD21681C2698B95C00AF75C0 /* Shader.hpp */,
+				FD2168192698B95C00AF75C0 /* ShaderStream.cpp */,
+				FD21681A2698B95C00AF75C0 /* ShaderStream.hpp */,
+				FD2168182698B95C00AF75C0 /* ShaderStreamInterface.h */,
 				FDF122C426900A080075E09C /* main.cpp */,
 				FD2BE4C32692A75D00E3E1E0 /* stb_image */,
 				FD2BE4C22692A75D00E3E1E0 /* UFImage.h */,
@@ -200,6 +218,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD2BE4DB2692A75D00E3E1E0 /* stb_vorbis.c in Sources */,
+				FD21681D2698B95D00AF75C0 /* ShaderStream.cpp in Sources */,
+				FD21681E2698B95D00AF75C0 /* Shader.cpp in Sources */,
 				FDF122C526900A080075E09C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,8 +342,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZJK3MYETQ3;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,8 +358,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZJK3MYETQ3;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

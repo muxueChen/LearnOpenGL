@@ -1,8 +1,8 @@
 //
-//  UFImageDecode.hpp
+//  UFImage.hpp
 //  libpng
 //
-//  Created by UFOTO on 2021/5/13.
+//  Created by 陈学明 on 2021/7/1.
 //
 
 #include <stdio.h>
@@ -71,6 +71,7 @@ private:
     string path;
     void decode() {
         int iw, ih, n;
+        stbi_set_flip_vertically_on_load(true);
         data = stbi_load(path.c_str(), &iw, &ih, &n, 0);
         format = static_cast<UFPixelSpace>(n);
         width = iw;
