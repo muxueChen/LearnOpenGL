@@ -1,20 +1,20 @@
 //
-//  ShaderStream.cpp
-//  Shaders
+//  ShaderStream1.cpp
+//  Texture
 //
-//  Created by 陈学明 on 2021/7/2.
+//  Created by 陈学明 on 2021/7/11.
 //
 
-#include "ShaderStream.hpp"
+#include "ShaderStream1.hpp"
 
-ShaderStream:: ShaderStream() {
+ShaderStream1:: ShaderStream1() {
     // 顶点着色器
     vertextCode = vertexStream();
     // 片段着色器代码
     fragmentCode = fragmentStream();
 }
 
-char * ShaderStream:: vertexStream() {
+char * ShaderStream1:: vertexStream() {
     return SHADER_SRC(
         \#version 330 core\n
         layout (location = 0) in vec3 aPos;
@@ -32,7 +32,7 @@ char * ShaderStream:: vertexStream() {
     );
 }
 
-char * ShaderStream:: fragmentStream() {
+char * ShaderStream1:: fragmentStream() {
     return SHADER_SRC(
         \#version 330 core\n
         out vec4 FragColor;
@@ -42,13 +42,7 @@ char * ShaderStream:: fragmentStream() {
         uniform sampler2D texture2;
 
         void main() {
-//            FragColor = vec4(ourColor, 1.0);
-//            FragColor = texture(ourTexture, TexCoord);
-//            FragColor = texture(ourTexture, TexCoord) * vec4(ourColor, 1.0);
-            // 混合纹理
-//            FragColor = mix(texture(texture1, TexCoord), texture(texture2, TexCoord), 0.2);
         
-            // 修改笑脸看的方向
         vec2 faceCoord = vec2(1.0 - TexCoord.x, TexCoord.y);
         FragColor = mix(texture(texture1, TexCoord), texture(texture2, faceCoord), 0.2);
         }

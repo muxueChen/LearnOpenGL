@@ -11,6 +11,8 @@
 		FD21681E2698B95D00AF75C0 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD21681B2698B95C00AF75C0 /* Shader.cpp */; };
 		FD216822269ADEA200AF75C0 /* container.jpeg in CopyFiles */ = {isa = PBXBuildFile; fileRef = FD21681F2698BC2C00AF75C0 /* container.jpeg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FD2BE4DB2692A75D00E3E1E0 /* stb_vorbis.c in Sources */ = {isa = PBXBuildFile; fileRef = FD2BE4CC2692A75D00E3E1E0 /* stb_vorbis.c */; };
+		FD4D6258269B1CB60002930A /* ShaderStream1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD4D6256269B1CB60002930A /* ShaderStream1.cpp */; };
+		FD4D625B269B1D0C0002930A /* ShaderStream2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD4D6259269B1D0C0002930A /* ShaderStream2.cpp */; };
 		FDF122C526900A080075E09C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDF122C426900A080075E09C /* main.cpp */; };
 		FDF122CD26900A5E0075E09C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF122CC26900A5E0075E09C /* OpenGL.framework */; };
 		FDF122CF26900AA70075E09C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF122CE26900AA70075E09C /* CoreFoundation.framework */; };
@@ -63,6 +65,10 @@
 		FD2BE4D82692A75D00E3E1E0 /* stb_tilemap_editor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_tilemap_editor.h; sourceTree = "<group>"; };
 		FD2BE4D92692A75D00E3E1E0 /* stb_include.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_include.h; sourceTree = "<group>"; };
 		FD2BE4DA2692A75D00E3E1E0 /* stb_ds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_ds.h; sourceTree = "<group>"; };
+		FD4D6256269B1CB60002930A /* ShaderStream1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderStream1.cpp; sourceTree = "<group>"; };
+		FD4D6257269B1CB60002930A /* ShaderStream1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ShaderStream1.hpp; sourceTree = "<group>"; };
+		FD4D6259269B1D0C0002930A /* ShaderStream2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderStream2.cpp; sourceTree = "<group>"; };
+		FD4D625A269B1D0C0002930A /* ShaderStream2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ShaderStream2.hpp; sourceTree = "<group>"; };
 		FDF122C126900A080075E09C /* Texture */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Texture; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF122C426900A080075E09C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FDF122CC26900A5E0075E09C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -142,6 +148,10 @@
 				FD21681C2698B95C00AF75C0 /* Shader.hpp */,
 				FD2168192698B95C00AF75C0 /* ShaderStream.cpp */,
 				FD21681A2698B95C00AF75C0 /* ShaderStream.hpp */,
+				FD4D6256269B1CB60002930A /* ShaderStream1.cpp */,
+				FD4D6257269B1CB60002930A /* ShaderStream1.hpp */,
+				FD4D6259269B1D0C0002930A /* ShaderStream2.cpp */,
+				FD4D625A269B1D0C0002930A /* ShaderStream2.hpp */,
 				FD2168182698B95C00AF75C0 /* ShaderStreamInterface.h */,
 				FDF122C426900A080075E09C /* main.cpp */,
 				FD2BE4C32692A75D00E3E1E0 /* stb_image */,
@@ -220,7 +230,9 @@
 				FD2BE4DB2692A75D00E3E1E0 /* stb_vorbis.c in Sources */,
 				FD21681D2698B95D00AF75C0 /* ShaderStream.cpp in Sources */,
 				FD21681E2698B95D00AF75C0 /* Shader.cpp in Sources */,
+				FD4D6258269B1CB60002930A /* ShaderStream1.cpp in Sources */,
 				FDF122C526900A080075E09C /* main.cpp in Sources */,
+				FD4D625B269B1D0C0002930A /* ShaderStream2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
