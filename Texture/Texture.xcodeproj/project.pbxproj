@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD21681D2698B95D00AF75C0 /* ShaderStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD2168192698B95C00AF75C0 /* ShaderStream.cpp */; };
-		FD21681E2698B95D00AF75C0 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD21681B2698B95C00AF75C0 /* Shader.cpp */; };
 		FD216822269ADEA200AF75C0 /* container.jpeg in CopyFiles */ = {isa = PBXBuildFile; fileRef = FD21681F2698BC2C00AF75C0 /* container.jpeg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		FD2BE4DB2692A75D00E3E1E0 /* stb_vorbis.c in Sources */ = {isa = PBXBuildFile; fileRef = FD2BE4CC2692A75D00E3E1E0 /* stb_vorbis.c */; };
 		FD4D6258269B1CB60002930A /* ShaderStream1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD4D6256269B1CB60002930A /* ShaderStream1.cpp */; };
 		FD4D625B269B1D0C0002930A /* ShaderStream2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD4D6259269B1D0C0002930A /* ShaderStream2.cpp */; };
+		FDB254D12712DFA300ACDDC8 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDB254B52712DFA300ACDDC8 /* Shader.cpp */; };
+		FDB254D22712DFA300ACDDC8 /* ShaderStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDB254B62712DFA300ACDDC8 /* ShaderStream.cpp */; };
+		FDB254D32712DFA300ACDDC8 /* stb_vorbis.c in Sources */ = {isa = PBXBuildFile; fileRef = FDB254C12712DFA300ACDDC8 /* stb_vorbis.c */; };
 		FDF122C526900A080075E09C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDF122C426900A080075E09C /* main.cpp */; };
 		FDF122CD26900A5E0075E09C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF122CC26900A5E0075E09C /* OpenGL.framework */; };
 		FDF122CF26900AA70075E09C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF122CE26900AA70075E09C /* CoreFoundation.framework */; };
@@ -34,41 +34,41 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FD2168182698B95C00AF75C0 /* ShaderStreamInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderStreamInterface.h; path = ../../Shaders/Shaders/ShaderStreamInterface.h; sourceTree = "<group>"; };
-		FD2168192698B95C00AF75C0 /* ShaderStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderStream.cpp; path = ../../Shaders/Shaders/ShaderStream.cpp; sourceTree = "<group>"; };
-		FD21681A2698B95C00AF75C0 /* ShaderStream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShaderStream.hpp; path = ../../Shaders/Shaders/ShaderStream.hpp; sourceTree = "<group>"; };
-		FD21681B2698B95C00AF75C0 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = ../../Shaders/Shaders/Shader.cpp; sourceTree = "<group>"; };
-		FD21681C2698B95C00AF75C0 /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Shader.hpp; path = ../../Shaders/Shaders/Shader.hpp; sourceTree = "<group>"; };
 		FD21681F2698BC2C00AF75C0 /* container.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpeg; sourceTree = "<group>"; };
 		FD216825269B164F00AF75C0 /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
-		FD2BE4C22692A75D00E3E1E0 /* UFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFImage.h; sourceTree = "<group>"; };
-		FD2BE4C42692A75D00E3E1E0 /* stb_c_lexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_c_lexer.h; sourceTree = "<group>"; };
-		FD2BE4C52692A75D00E3E1E0 /* stb_image_write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_write.h; sourceTree = "<group>"; };
-		FD2BE4C62692A75D00E3E1E0 /* stb_image_resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_resize.h; sourceTree = "<group>"; };
-		FD2BE4C72692A75D00E3E1E0 /* stb_rect_pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_rect_pack.h; sourceTree = "<group>"; };
-		FD2BE4C82692A75D00E3E1E0 /* stb_divide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_divide.h; sourceTree = "<group>"; };
-		FD2BE4C92692A75D00E3E1E0 /* stb_sprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_sprintf.h; sourceTree = "<group>"; };
-		FD2BE4CA2692A75D00E3E1E0 /* stb_dxt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_dxt.h; sourceTree = "<group>"; };
-		FD2BE4CB2692A75D00E3E1E0 /* stb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb.h; sourceTree = "<group>"; };
-		FD2BE4CC2692A75D00E3E1E0 /* stb_vorbis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stb_vorbis.c; sourceTree = "<group>"; };
-		FD2BE4CD2692A75D00E3E1E0 /* stb_perlin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_perlin.h; sourceTree = "<group>"; };
-		FD2BE4CE2692A75D00E3E1E0 /* stb_connected_components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_connected_components.h; sourceTree = "<group>"; };
-		FD2BE4CF2692A75D00E3E1E0 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
-		FD2BE4D02692A75D00E3E1E0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		FD2BE4D12692A75D00E3E1E0 /* stb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_truetype.h; sourceTree = "<group>"; };
-		FD2BE4D22692A75D00E3E1E0 /* stb_hexwave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_hexwave.h; sourceTree = "<group>"; };
-		FD2BE4D32692A75D00E3E1E0 /* stb_leakcheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_leakcheck.h; sourceTree = "<group>"; };
-		FD2BE4D42692A75D00E3E1E0 /* stb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_textedit.h; sourceTree = "<group>"; };
-		FD2BE4D52692A75D00E3E1E0 /* stb_easy_font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_easy_font.h; sourceTree = "<group>"; };
-		FD2BE4D62692A75D00E3E1E0 /* stb_herringbone_wang_tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_herringbone_wang_tile.h; sourceTree = "<group>"; };
-		FD2BE4D72692A75D00E3E1E0 /* stb_voxel_render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_voxel_render.h; sourceTree = "<group>"; };
-		FD2BE4D82692A75D00E3E1E0 /* stb_tilemap_editor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_tilemap_editor.h; sourceTree = "<group>"; };
-		FD2BE4D92692A75D00E3E1E0 /* stb_include.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_include.h; sourceTree = "<group>"; };
-		FD2BE4DA2692A75D00E3E1E0 /* stb_ds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_ds.h; sourceTree = "<group>"; };
 		FD4D6256269B1CB60002930A /* ShaderStream1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderStream1.cpp; sourceTree = "<group>"; };
 		FD4D6257269B1CB60002930A /* ShaderStream1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ShaderStream1.hpp; sourceTree = "<group>"; };
 		FD4D6259269B1D0C0002930A /* ShaderStream2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderStream2.cpp; sourceTree = "<group>"; };
 		FD4D625A269B1D0C0002930A /* ShaderStream2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ShaderStream2.hpp; sourceTree = "<group>"; };
+		FDB254B32712DFA300ACDDC8 /* UFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFImage.h; sourceTree = "<group>"; };
+		FDB254B42712DFA300ACDDC8 /* ShaderStream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ShaderStream.hpp; sourceTree = "<group>"; };
+		FDB254B52712DFA300ACDDC8 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		FDB254B62712DFA300ACDDC8 /* ShaderStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderStream.cpp; sourceTree = "<group>"; };
+		FDB254B72712DFA300ACDDC8 /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
+		FDB254B92712DFA300ACDDC8 /* stb_c_lexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_c_lexer.h; sourceTree = "<group>"; };
+		FDB254BA2712DFA300ACDDC8 /* stb_image_write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_write.h; sourceTree = "<group>"; };
+		FDB254BB2712DFA300ACDDC8 /* stb_image_resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_resize.h; sourceTree = "<group>"; };
+		FDB254BC2712DFA300ACDDC8 /* stb_rect_pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_rect_pack.h; sourceTree = "<group>"; };
+		FDB254BD2712DFA300ACDDC8 /* stb_divide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_divide.h; sourceTree = "<group>"; };
+		FDB254BE2712DFA300ACDDC8 /* stb_sprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_sprintf.h; sourceTree = "<group>"; };
+		FDB254BF2712DFA300ACDDC8 /* stb_dxt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_dxt.h; sourceTree = "<group>"; };
+		FDB254C02712DFA300ACDDC8 /* stb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb.h; sourceTree = "<group>"; };
+		FDB254C12712DFA300ACDDC8 /* stb_vorbis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stb_vorbis.c; sourceTree = "<group>"; };
+		FDB254C22712DFA300ACDDC8 /* stb_perlin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_perlin.h; sourceTree = "<group>"; };
+		FDB254C32712DFA300ACDDC8 /* stb_connected_components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_connected_components.h; sourceTree = "<group>"; };
+		FDB254C42712DFA300ACDDC8 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		FDB254C52712DFA300ACDDC8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FDB254C62712DFA300ACDDC8 /* stb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_truetype.h; sourceTree = "<group>"; };
+		FDB254C72712DFA300ACDDC8 /* stb_hexwave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_hexwave.h; sourceTree = "<group>"; };
+		FDB254C82712DFA300ACDDC8 /* stb_leakcheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_leakcheck.h; sourceTree = "<group>"; };
+		FDB254C92712DFA300ACDDC8 /* stb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_textedit.h; sourceTree = "<group>"; };
+		FDB254CA2712DFA300ACDDC8 /* stb_easy_font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_easy_font.h; sourceTree = "<group>"; };
+		FDB254CB2712DFA300ACDDC8 /* stb_herringbone_wang_tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_herringbone_wang_tile.h; sourceTree = "<group>"; };
+		FDB254CC2712DFA300ACDDC8 /* stb_voxel_render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_voxel_render.h; sourceTree = "<group>"; };
+		FDB254CD2712DFA300ACDDC8 /* stb_tilemap_editor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_tilemap_editor.h; sourceTree = "<group>"; };
+		FDB254CE2712DFA300ACDDC8 /* stb_include.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_include.h; sourceTree = "<group>"; };
+		FDB254CF2712DFA300ACDDC8 /* stb_ds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_ds.h; sourceTree = "<group>"; };
+		FDB254D02712DFA300ACDDC8 /* ShaderStreamInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderStreamInterface.h; sourceTree = "<group>"; };
 		FDF122C126900A080075E09C /* Texture */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Texture; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF122C426900A080075E09C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FDF122CC26900A5E0075E09C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -92,32 +92,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FD2BE4C32692A75D00E3E1E0 /* stb_image */ = {
+		FDB254B22712DFA300ACDDC8 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				FD2BE4C42692A75D00E3E1E0 /* stb_c_lexer.h */,
-				FD2BE4C52692A75D00E3E1E0 /* stb_image_write.h */,
-				FD2BE4C62692A75D00E3E1E0 /* stb_image_resize.h */,
-				FD2BE4C72692A75D00E3E1E0 /* stb_rect_pack.h */,
-				FD2BE4C82692A75D00E3E1E0 /* stb_divide.h */,
-				FD2BE4C92692A75D00E3E1E0 /* stb_sprintf.h */,
-				FD2BE4CA2692A75D00E3E1E0 /* stb_dxt.h */,
-				FD2BE4CB2692A75D00E3E1E0 /* stb.h */,
-				FD2BE4CC2692A75D00E3E1E0 /* stb_vorbis.c */,
-				FD2BE4CD2692A75D00E3E1E0 /* stb_perlin.h */,
-				FD2BE4CE2692A75D00E3E1E0 /* stb_connected_components.h */,
-				FD2BE4CF2692A75D00E3E1E0 /* stb_image.h */,
-				FD2BE4D02692A75D00E3E1E0 /* README.md */,
-				FD2BE4D12692A75D00E3E1E0 /* stb_truetype.h */,
-				FD2BE4D22692A75D00E3E1E0 /* stb_hexwave.h */,
-				FD2BE4D32692A75D00E3E1E0 /* stb_leakcheck.h */,
-				FD2BE4D42692A75D00E3E1E0 /* stb_textedit.h */,
-				FD2BE4D52692A75D00E3E1E0 /* stb_easy_font.h */,
-				FD2BE4D62692A75D00E3E1E0 /* stb_herringbone_wang_tile.h */,
-				FD2BE4D72692A75D00E3E1E0 /* stb_voxel_render.h */,
-				FD2BE4D82692A75D00E3E1E0 /* stb_tilemap_editor.h */,
-				FD2BE4D92692A75D00E3E1E0 /* stb_include.h */,
-				FD2BE4DA2692A75D00E3E1E0 /* stb_ds.h */,
+				FDB254B32712DFA300ACDDC8 /* UFImage.h */,
+				FDB254B42712DFA300ACDDC8 /* ShaderStream.hpp */,
+				FDB254B52712DFA300ACDDC8 /* Shader.cpp */,
+				FDB254B62712DFA300ACDDC8 /* ShaderStream.cpp */,
+				FDB254B72712DFA300ACDDC8 /* Shader.hpp */,
+				FDB254B82712DFA300ACDDC8 /* stb_image */,
+				FDB254D02712DFA300ACDDC8 /* ShaderStreamInterface.h */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		FDB254B82712DFA300ACDDC8 /* stb_image */ = {
+			isa = PBXGroup;
+			children = (
+				FDB254B92712DFA300ACDDC8 /* stb_c_lexer.h */,
+				FDB254BA2712DFA300ACDDC8 /* stb_image_write.h */,
+				FDB254BB2712DFA300ACDDC8 /* stb_image_resize.h */,
+				FDB254BC2712DFA300ACDDC8 /* stb_rect_pack.h */,
+				FDB254BD2712DFA300ACDDC8 /* stb_divide.h */,
+				FDB254BE2712DFA300ACDDC8 /* stb_sprintf.h */,
+				FDB254BF2712DFA300ACDDC8 /* stb_dxt.h */,
+				FDB254C02712DFA300ACDDC8 /* stb.h */,
+				FDB254C12712DFA300ACDDC8 /* stb_vorbis.c */,
+				FDB254C22712DFA300ACDDC8 /* stb_perlin.h */,
+				FDB254C32712DFA300ACDDC8 /* stb_connected_components.h */,
+				FDB254C42712DFA300ACDDC8 /* stb_image.h */,
+				FDB254C52712DFA300ACDDC8 /* README.md */,
+				FDB254C62712DFA300ACDDC8 /* stb_truetype.h */,
+				FDB254C72712DFA300ACDDC8 /* stb_hexwave.h */,
+				FDB254C82712DFA300ACDDC8 /* stb_leakcheck.h */,
+				FDB254C92712DFA300ACDDC8 /* stb_textedit.h */,
+				FDB254CA2712DFA300ACDDC8 /* stb_easy_font.h */,
+				FDB254CB2712DFA300ACDDC8 /* stb_herringbone_wang_tile.h */,
+				FDB254CC2712DFA300ACDDC8 /* stb_voxel_render.h */,
+				FDB254CD2712DFA300ACDDC8 /* stb_tilemap_editor.h */,
+				FDB254CE2712DFA300ACDDC8 /* stb_include.h */,
+				FDB254CF2712DFA300ACDDC8 /* stb_ds.h */,
 			);
 			path = stb_image;
 			sourceTree = "<group>";
@@ -142,20 +156,14 @@
 		FDF122C326900A080075E09C /* Texture */ = {
 			isa = PBXGroup;
 			children = (
+				FDB254B22712DFA300ACDDC8 /* utils */,
 				FD216825269B164F00AF75C0 /* awesomeface.png */,
 				FD21681F2698BC2C00AF75C0 /* container.jpeg */,
-				FD21681B2698B95C00AF75C0 /* Shader.cpp */,
-				FD21681C2698B95C00AF75C0 /* Shader.hpp */,
-				FD2168192698B95C00AF75C0 /* ShaderStream.cpp */,
-				FD21681A2698B95C00AF75C0 /* ShaderStream.hpp */,
 				FD4D6256269B1CB60002930A /* ShaderStream1.cpp */,
 				FD4D6257269B1CB60002930A /* ShaderStream1.hpp */,
 				FD4D6259269B1D0C0002930A /* ShaderStream2.cpp */,
 				FD4D625A269B1D0C0002930A /* ShaderStream2.hpp */,
-				FD2168182698B95C00AF75C0 /* ShaderStreamInterface.h */,
 				FDF122C426900A080075E09C /* main.cpp */,
-				FD2BE4C32692A75D00E3E1E0 /* stb_image */,
-				FD2BE4C22692A75D00E3E1E0 /* UFImage.h */,
 			);
 			path = Texture;
 			sourceTree = "<group>";
@@ -227,11 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2BE4DB2692A75D00E3E1E0 /* stb_vorbis.c in Sources */,
-				FD21681D2698B95D00AF75C0 /* ShaderStream.cpp in Sources */,
-				FD21681E2698B95D00AF75C0 /* Shader.cpp in Sources */,
+				FDB254D32712DFA300ACDDC8 /* stb_vorbis.c in Sources */,
+				FDB254D22712DFA300ACDDC8 /* ShaderStream.cpp in Sources */,
 				FD4D6258269B1CB60002930A /* ShaderStream1.cpp in Sources */,
 				FDF122C526900A080075E09C /* main.cpp in Sources */,
+				FDB254D12712DFA300ACDDC8 /* Shader.cpp in Sources */,
 				FD4D625B269B1D0C0002930A /* ShaderStream2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +361,8 @@
 		FDF122C926900A080075E09C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = NO;
@@ -369,6 +379,8 @@
 		FDF122CA26900A080075E09C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = NO;

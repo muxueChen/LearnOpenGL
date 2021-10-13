@@ -32,6 +32,12 @@ Shader:: Shader(ShaderStreamInterface *shaderStream) {
     fragment = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fragment, 1, &fShaderCode, NULL);
     glCompileShader(fragment);
+    // 打印连接错误（如果有的话）
+    glGetProgramiv(ID, GL_VALIDATE_STATUS, &success);
+    if(!success) {
+        glGetProgramInfoLog(ID, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
+    }
     
     // 着色器程序
     ID = glCreateProgram();
@@ -55,6 +61,11 @@ Shader * Shader:: use() {
     return this;
 }
 
+Shader * Shader:: unuse() {
+    glUseProgram(0);
+    return this;
+}
+
 Shader * Shader:: setBool(const std::string &name, bool value) {
     glUniform1i(glGetUniformLocation(ID, name.c_str()), value);
     return this;
@@ -70,7 +81,31 @@ Shader * Shader:: setFloat(const std::string &name, float value) {
     return this;
 }
 
-Shader * Shader:: setColor(const std::string &name, float red, float green, float blue, float alpha) {
-    glUniform4f(glGetUniformLocation(ID, name.c_str()), red, green, blue, alpha);
+Shader * Shader:: setVec4(const std::string &name, float f1, float f2, float f3, float f4) {
+    glUniform4f(glGetUniformLocation(ID, name.c_str()), f1, f2, f3, f4);
+    return this;
+}
+Shader * Shader:: setVec2(const std::string &name, float f1, float f2) {
+    glUniform2f(glGetUniformLocation(ID, name.c_str()), f1, f2);
+    return this;
+}
+
+Shader * Shader:: setVec3(const std::string &name, float f1, float f2, float f3) {
+    glUniform3f(glGetUniformLocation(ID, name.c_str()), f1, f2, f3);
+    return this;
+}
+
+Shader * Shader:: setMat2(const std::string &name, const glm::mat2 &value) {
+    glUniformMatrix2fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE,  &value[0][0]);
+    return this;
+}
+
+Shader * Shader:: setMat3(const std::string &name,  const glm::mat3 &value) {
+    glUniformMatrix3fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE,  &value[0][0]);
+    return this;
+}
+
+Shader * Shader:: setMat4(const std::string &name, const glm::mat4 &value) {
+    glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &value[0][0]);
     return this;
 }

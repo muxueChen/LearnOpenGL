@@ -34,6 +34,7 @@ void procesInput(GLFWwindow *window) {
 
 int demo();
 int demo1();
+GLuint copyTexture(GLuint originTexture, int width, int height);
 
 int main(int argc, const char * argv[]) {
     
@@ -106,6 +107,9 @@ int demo() {
     UFImage *image2 = new UFImage(path2);
     GLuint texture2 = image2->glTexture();
     
+    GLuint texture3 = copyTexture(texture2, image2->width, image2->height);
+    
+    
     while (!glfwWindowShouldClose(window)) {
         procesInput(window);
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -118,7 +122,7 @@ int demo() {
         glUniform1i(location, 0);
         
         glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, texture2);
+        glBindTexture(GL_TEXTURE_2D, texture3);
         location = glGetUniformLocation(shader->ID, "texture2");
         glUniform1i(location, 1);
         
@@ -198,9 +202,11 @@ int demo1() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
     
+    
     string path2 = string("/Users/chenxueming/Desktop/LearnOpenGL/Texture/Texture/awesomeface.png");
     UFImage *image2 = new UFImage(path2);
     GLuint texture2 = image2->glTexture();
+    GLuint texture3 = copyTexture(texture2, image2->width, image2->height);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
     
@@ -216,7 +222,7 @@ int demo1() {
         glUniform1i(location, 0);
         
         glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, texture2);
+        glBindTexture(GL_TEXTURE_2D, texture3);
         location = glGetUniformLocation(shader->ID, "texture2");
         glUniform1i(location, 1);
         
@@ -231,4 +237,30 @@ int demo1() {
     glfwTerminate();
     return 0;
     return 0;
+}
+
+GLuint copyTexture(GLuint originTexture, int width, int height) {
+    GLuint dest_id;
+    glGenTextures(1, &dest_id);
+    glBindTexture(GL_TEXTURE_2D, dest_id);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, (GLint)GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, (GLint)GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, (GLint)GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, (GLint)GL_CLAMP_TO_EDGE);
+
+    glTexImage2D(GL_TEXTURE_2D, 0, (GLint)GL_RGBA32F, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr);
+    
+    GLuint fbo;
+    glGenFramebuffers(1,&fbo);
+    glBindFramebuffer(GL_READ_FRAMEBUFFER, fbo);
+    glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_COLOR_ATTACHMENT0,
+            GL_TEXTURE_2D, originTexture, 0);
+    
+    glBindTexture(GL_TEXTURE_2D, dest_id);
+    glCopyTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 0, 0, width,height);
+    
+    // 解绑纹理
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    glBindTexture(GL_TEXTURE_2D,0);
+    return dest_id;
 }
