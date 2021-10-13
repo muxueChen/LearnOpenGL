@@ -43,7 +43,26 @@ char * ShaderStream:: fragmentStream() {
     return SHADER_SRC(
 \#version 330 core\n
 out vec4 FragColor;
+// 材质
+struct Material {
+    vec3 ambient;// 环境光
+    vec3 diffuse;//漫反射光
+    vec3 specular;//镜面反射光
+    float shininess;//反光度
+};
+                      
+struct Light {
+  vec3 position;
 
+  vec3 ambient;
+  vec3 diffuse;
+  vec3 specular;
+};
+
+uniform Light light;
+
+uniform Material material;
+                      
 in vec3 Normal;// 法向量
 in vec3 FragPos;//片段位置
 
@@ -53,33 +72,24 @@ uniform vec3 lightColor;// 环境光的颜色
 uniform vec3 objectColor;// 物体的颜色
 
 void main() {
-  // 环境光照的颜色
-  float ambientStrength = 0.1;
-  vec3 ambient = ambientStrength * lightColor;
+    // 环境光
+    vec3 ambient = light.ambient*lightColor * material.ambient;
+
+    // 漫反射
+    vec3 norm = normalize(Normal);
+    vec3 lightDir = normalize(lightPos - FragPos);
+    float diff = max(dot(norm, lightDir), 0.0);
+    vec3 diffuse = light.diffuse*lightColor * (diff * material.diffuse);
+
+    // 镜面光
+    vec3 viewDir = normalize(viewPos - FragPos);
+    vec3 reflectDir = reflect(-lightDir, norm);
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
+    vec3 specular = light.specular*lightColor * (spec * material.specular);
+
+    vec3 result = ambient + diffuse + specular;
     
-  // 漫反射光照
-    // 归一化法向量
-  vec3 norm = normalize(Normal);
-    // 归一化后的光线入射向量
-  vec3 lightDir = normalize(lightPos - FragPos);
-    // 得到片段法向量与光线向量的余弦值
-  float diff = max(dot(norm, lightDir), 0.0);
-    // 漫反射光的颜色
-  vec3 diffuse = diff * lightColor;
-  
-  // 镜面反射光最大强度
-  float specularStrength = 0.5;
-    // 视线归一化向量
-  vec3 viewDir = normalize(viewPos - FragPos);
-    // 计算得出反射归一化向量
-  vec3 reflectDir = reflect(-lightDir, norm);
-    // 片段的镜面反射分量
-  float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
-    // 镜面反色的颜色
-  vec3 specular = specularStrength * spec * lightColor;
-      
-  vec3 result = (ambient + diffuse + specular) * objectColor;
-  FragColor = vec4(result, 1.0);
+    FragColor = vec4(result, 1.0);
 }
 );
 }

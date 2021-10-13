@@ -154,14 +154,32 @@ int main(int argc, const char * argv[]) {
             processInput(window);
             lightPos.x = 1.2 * sin(currentFrame);
             lightPos.z = 2.0 * cos(currentFrame);
+            
+            glm::vec3 lightColor;
+            lightColor.x = sin(glfwGetTime() * 2.0f);
+            lightColor.y = sin(glfwGetTime() * 0.7f);
+            lightColor.z = sin(glfwGetTime() * 1.3f);
+            
             glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             glEnable(GL_DEPTH_TEST);
             lightingShader.use();
             lightingShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
-            lightingShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
+            lightingShader.setVec3("lightColor", lightColor.x, lightColor.y, lightColor.z);
             lightingShader.setVec3("lightPos", lightPos.x, lightPos.y, lightPos.z);
             lightingShader.setVec3("viewPos", camera.Position.x, camera.Position.y, camera.Position.z);
+            lightingShader.setVec3("material.ambient",  1.0f, 0.5f, 0.31f);
+            lightingShader.setVec3("material.diffuse",  1.0f, 0.5f, 0.31f);
+            lightingShader.setVec3("material.specular", 0.5f, 0.5f, 0.5f);
+            lightingShader.setFloat("material.shininess", 32.0f);
+            
+            glm::vec3 diffuseColor = lightColor   * glm::vec3(0.5f); // 降低影响
+            glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f); // 很低的影响
+            
+            lightingShader.setVec3("light.ambient",  ambientColor.x, ambientColor.y, ambientColor.z);
+            lightingShader.setVec3("light.diffuse",  diffuseColor.x, diffuseColor.y, diffuseColor.z);
+            lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+
 
             // view/projection transformations
             glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
