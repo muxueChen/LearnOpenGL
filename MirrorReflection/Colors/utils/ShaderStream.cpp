@@ -54,21 +54,29 @@ uniform vec3 objectColor;// 物体的颜色
 
 void main()
 {
-  // 环境光照
+  // 环境光照的颜色
   float ambientStrength = 0.1;
   vec3 ambient = ambientStrength * lightColor;
     
   // 漫反射光照
+    // 归一化法向量
   vec3 norm = normalize(Normal);
+    // 归一化后的光线入射向量
   vec3 lightDir = normalize(lightPos - FragPos);
+    // 得到片段法向量与光线向量的余弦值
   float diff = max(dot(norm, lightDir), 0.0);
+    // 漫反射光的颜色
   vec3 diffuse = diff * lightColor;
   
-  // 镜面反射
+  // 镜面反射光最大强度
   float specularStrength = 0.5;
+    // 视线归一化向量
   vec3 viewDir = normalize(viewPos - FragPos);
+    // 计算得出反射归一化向量
   vec3 reflectDir = reflect(-lightDir, norm);
+    // 片段的镜面反射分量
   float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
+    // 镜面反色的颜色
   vec3 specular = specularStrength * spec * lightColor;
       
   vec3 result = (ambient + diffuse + specular) * objectColor;
