@@ -89,6 +89,7 @@ void main() {
     
     float theta = dot(lightDir, normalize(-light.direction));
     
+    // 镜面光
     if (theta > light.cutOff) {
         vec3 viewDir = normalize(viewPos - FragPos);
         vec3 reflectDir = reflect(-lightDir, norm);
@@ -97,7 +98,7 @@ void main() {
         vec3 result = ambient + diffuse + specular;
         FragColor = vec4(result, 1.0);
     } else {
-        // 镜面光
+        
         FragColor = vec4(light.ambient * texture(material.diffuse, TexCoords).rgb, 1.0);
         FragColor = vec4(result, 1.0);
     }

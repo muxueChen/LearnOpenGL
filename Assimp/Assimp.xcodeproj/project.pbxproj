@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD98C961268D30C8001D720E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD98C960268D30C8001D720E /* main.cpp */; };
+		FD98C969268D3131001D720E /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98C968268D3131001D720E /* libglfw.3.3.dylib */; };
+		FD98C96B268D3144001D720E /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98C96A268D3144001D720E /* libGLEW.2.2.0.dylib */; };
+		FD98C96D268D314A001D720E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98C96C268D314A001D720E /* OpenGL.framework */; };
+		FD98C96F268D3150001D720E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98C96E268D3150001D720E /* CoreFoundation.framework */; };
+		FDB255E0271C10BD00ACDDC8 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDB255C3271C10BC00ACDDC8 /* Shader.cpp */; };
+		FDB255E1271C10BD00ACDDC8 /* ShaderStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDB255C4271C10BC00ACDDC8 /* ShaderStream.cpp */; };
+		FDB255E2271C10BD00ACDDC8 /* stb_vorbis.c in Sources */ = {isa = PBXBuildFile; fileRef = FDB255CF271C10BC00ACDDC8 /* stb_vorbis.c */; };
+		FDB255E3271C10BD00ACDDC8 /* LamplightShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDB255DE271C10BC00ACDDC8 /* LamplightShader.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD98C95B268D30C8001D720E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FD98C95D268D30C8001D720E /* Assimp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assimp; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD98C960268D30C8001D720E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FD98C968268D3131001D720E /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.4/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		FD98C96A268D3144001D720E /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
+		FD98C96C268D314A001D720E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		FD98C96E268D3150001D720E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		FDB255C0271C10BC00ACDDC8 /* LamplightShader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LamplightShader.hpp; sourceTree = "<group>"; };
+		FDB255C1271C10BC00ACDDC8 /* UFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFImage.h; sourceTree = "<group>"; };
+		FDB255C2271C10BC00ACDDC8 /* ShaderStream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ShaderStream.hpp; sourceTree = "<group>"; };
+		FDB255C3271C10BC00ACDDC8 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		FDB255C4271C10BC00ACDDC8 /* ShaderStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderStream.cpp; sourceTree = "<group>"; };
+		FDB255C5271C10BC00ACDDC8 /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
+		FDB255C7271C10BC00ACDDC8 /* stb_c_lexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_c_lexer.h; sourceTree = "<group>"; };
+		FDB255C8271C10BC00ACDDC8 /* stb_image_write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_write.h; sourceTree = "<group>"; };
+		FDB255C9271C10BC00ACDDC8 /* stb_image_resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_resize.h; sourceTree = "<group>"; };
+		FDB255CA271C10BC00ACDDC8 /* stb_rect_pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_rect_pack.h; sourceTree = "<group>"; };
+		FDB255CB271C10BC00ACDDC8 /* stb_divide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_divide.h; sourceTree = "<group>"; };
+		FDB255CC271C10BC00ACDDC8 /* stb_sprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_sprintf.h; sourceTree = "<group>"; };
+		FDB255CD271C10BC00ACDDC8 /* stb_dxt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_dxt.h; sourceTree = "<group>"; };
+		FDB255CE271C10BC00ACDDC8 /* stb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb.h; sourceTree = "<group>"; };
+		FDB255CF271C10BC00ACDDC8 /* stb_vorbis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stb_vorbis.c; sourceTree = "<group>"; };
+		FDB255D0271C10BC00ACDDC8 /* stb_perlin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_perlin.h; sourceTree = "<group>"; };
+		FDB255D1271C10BC00ACDDC8 /* stb_connected_components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_connected_components.h; sourceTree = "<group>"; };
+		FDB255D2271C10BC00ACDDC8 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		FDB255D3271C10BC00ACDDC8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FDB255D4271C10BC00ACDDC8 /* stb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_truetype.h; sourceTree = "<group>"; };
+		FDB255D5271C10BC00ACDDC8 /* stb_hexwave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_hexwave.h; sourceTree = "<group>"; };
+		FDB255D6271C10BC00ACDDC8 /* stb_leakcheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_leakcheck.h; sourceTree = "<group>"; };
+		FDB255D7271C10BC00ACDDC8 /* stb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_textedit.h; sourceTree = "<group>"; };
+		FDB255D8271C10BC00ACDDC8 /* stb_easy_font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_easy_font.h; sourceTree = "<group>"; };
+		FDB255D9271C10BC00ACDDC8 /* stb_herringbone_wang_tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_herringbone_wang_tile.h; sourceTree = "<group>"; };
+		FDB255DA271C10BC00ACDDC8 /* stb_voxel_render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_voxel_render.h; sourceTree = "<group>"; };
+		FDB255DB271C10BC00ACDDC8 /* stb_tilemap_editor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_tilemap_editor.h; sourceTree = "<group>"; };
+		FDB255DC271C10BC00ACDDC8 /* stb_include.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_include.h; sourceTree = "<group>"; };
+		FDB255DD271C10BC00ACDDC8 /* stb_ds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_ds.h; sourceTree = "<group>"; };
+		FDB255DE271C10BC00ACDDC8 /* LamplightShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LamplightShader.cpp; sourceTree = "<group>"; };
+		FDB255DF271C10BC00ACDDC8 /* ShaderStreamInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderStreamInterface.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD98C95A268D30C8001D720E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD98C96F268D3150001D720E /* CoreFoundation.framework in Frameworks */,
+				FD98C96D268D314A001D720E /* OpenGL.framework in Frameworks */,
+				FD98C969268D3131001D720E /* libglfw.3.3.dylib in Frameworks */,
+				FD98C96B268D3144001D720E /* libGLEW.2.2.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD98C954268D30C8001D720E = {
+			isa = PBXGroup;
+			children = (
+				FD98C95F268D30C8001D720E /* Assimp */,
+				FD98C95E268D30C8001D720E /* Products */,
+				FD98C967268D3131001D720E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FD98C95E268D30C8001D720E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD98C95D268D30C8001D720E /* Assimp */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD98C95F268D30C8001D720E /* Assimp */ = {
+			isa = PBXGroup;
+			children = (
+				FDB255BF271C10BC00ACDDC8 /* utils */,
+				FD98C960268D30C8001D720E /* main.cpp */,
+			);
+			path = Assimp;
+			sourceTree = "<group>";
+		};
+		FD98C967268D3131001D720E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD98C96E268D3150001D720E /* CoreFoundation.framework */,
+				FD98C96C268D314A001D720E /* OpenGL.framework */,
+				FD98C96A268D3144001D720E /* libGLEW.2.2.0.dylib */,
+				FD98C968268D3131001D720E /* libglfw.3.3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDB255BF271C10BC00ACDDC8 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				FDB255C0271C10BC00ACDDC8 /* LamplightShader.hpp */,
+				FDB255C1271C10BC00ACDDC8 /* UFImage.h */,
+				FDB255C2271C10BC00ACDDC8 /* ShaderStream.hpp */,
+				FDB255C3271C10BC00ACDDC8 /* Shader.cpp */,
+				FDB255C4271C10BC00ACDDC8 /* ShaderStream.cpp */,
+				FDB255C5271C10BC00ACDDC8 /* Shader.hpp */,
+				FDB255C6271C10BC00ACDDC8 /* stb_image */,
+				FDB255DE271C10BC00ACDDC8 /* LamplightShader.cpp */,
+				FDB255DF271C10BC00ACDDC8 /* ShaderStreamInterface.h */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		FDB255C6271C10BC00ACDDC8 /* stb_image */ = {
+			isa = PBXGroup;
+			children = (
+				FDB255C7271C10BC00ACDDC8 /* stb_c_lexer.h */,
+				FDB255C8271C10BC00ACDDC8 /* stb_image_write.h */,
+				FDB255C9271C10BC00ACDDC8 /* stb_image_resize.h */,
+				FDB255CA271C10BC00ACDDC8 /* stb_rect_pack.h */,
+				FDB255CB271C10BC00ACDDC8 /* stb_divide.h */,
+				FDB255CC271C10BC00ACDDC8 /* stb_sprintf.h */,
+				FDB255CD271C10BC00ACDDC8 /* stb_dxt.h */,
+				FDB255CE271C10BC00ACDDC8 /* stb.h */,
+				FDB255CF271C10BC00ACDDC8 /* stb_vorbis.c */,
+				FDB255D0271C10BC00ACDDC8 /* stb_perlin.h */,
+				FDB255D1271C10BC00ACDDC8 /* stb_connected_components.h */,
+				FDB255D2271C10BC00ACDDC8 /* stb_image.h */,
+				FDB255D3271C10BC00ACDDC8 /* README.md */,
+				FDB255D4271C10BC00ACDDC8 /* stb_truetype.h */,
+				FDB255D5271C10BC00ACDDC8 /* stb_hexwave.h */,
+				FDB255D6271C10BC00ACDDC8 /* stb_leakcheck.h */,
+				FDB255D7271C10BC00ACDDC8 /* stb_textedit.h */,
+				FDB255D8271C10BC00ACDDC8 /* stb_easy_font.h */,
+				FDB255D9271C10BC00ACDDC8 /* stb_herringbone_wang_tile.h */,
+				FDB255DA271C10BC00ACDDC8 /* stb_voxel_render.h */,
+				FDB255DB271C10BC00ACDDC8 /* stb_tilemap_editor.h */,
+				FDB255DC271C10BC00ACDDC8 /* stb_include.h */,
+				FDB255DD271C10BC00ACDDC8 /* stb_ds.h */,
+			);
+			path = stb_image;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD98C95C268D30C8001D720E /* Assimp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD98C964268D30C8001D720E /* Build configuration list for PBXNativeTarget "Assimp" */;
+			buildPhases = (
+				FD98C959268D30C8001D720E /* Sources */,
+				FD98C95A268D30C8001D720E /* Frameworks */,
+				FD98C95B268D30C8001D720E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Assimp;
+			productName = Shaders;
+			productReference = FD98C95D268D30C8001D720E /* Assimp */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD98C955268D30C8001D720E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					FD98C95C268D30C8001D720E = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = FD98C958268D30C8001D720E /* Build configuration list for PBXProject "Assimp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD98C954268D30C8001D720E;
+			productRefGroup = FD98C95E268D30C8001D720E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD98C95C268D30C8001D720E /* Assimp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD98C959268D30C8001D720E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDB255E0271C10BD00ACDDC8 /* Shader.cpp in Sources */,
+				FDB255E1271C10BD00ACDDC8 /* ShaderStream.cpp in Sources */,
+				FDB255E2271C10BD00ACDDC8 /* stb_vorbis.c in Sources */,
+				FDB255E3271C10BD00ACDDC8 /* LamplightShader.cpp in Sources */,
+				FD98C961268D30C8001D720E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FD98C962268D30C8001D720E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FD98C963268D30C8001D720E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FD98C965268D30C8001D720E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.4/lib,
+					/usr/local/Cellar/glew/2.2.0_1/lib,
+					/usr/local/Cellar/assimp/5.0.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FD98C966268D30C8001D720E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.4/lib,
+					/usr/local/Cellar/glew/2.2.0_1/lib,
+					/usr/local/Cellar/assimp/5.0.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD98C958268D30C8001D720E /* Build configuration list for PBXProject "Assimp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD98C962268D30C8001D720E /* Debug */,
+				FD98C963268D30C8001D720E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD98C964268D30C8001D720E /* Build configuration list for PBXNativeTarget "Assimp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD98C965268D30C8001D720E /* Debug */,
+				FD98C966268D30C8001D720E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD98C955268D30C8001D720E /* Project object */;
+}
