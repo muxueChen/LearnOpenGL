@@ -17,20 +17,20 @@
 
 struct KeyPosition
 {
-    glm::vec3 position;
-    float timeStamp;
+    glm::vec3 position{0.0, 1.0, 1.0};
+    float timeStamp{0.0};
 };
 
 struct KeyRotation
 {
     glm::quat orientation;
-    float timeStamp;
+    float timeStamp{0.0};
 };
 
 struct KeyScale
 {
-    glm::vec3 scale;
-    float timeStamp;
+    glm::vec3 scale{1.0, 1.0, 1.0};
+    float timeStamp{0.0};
 };
 
 class Bone

@@ -20,7 +20,7 @@ struct AssimpNodeData
 {
     glm::mat4 transformation;
     std::string name;
-    int childrenCount;
+    int childrenCount{0};
     std::vector<AssimpNodeData> children;
 };
 
@@ -34,6 +34,9 @@ public:
         Assimp::Importer importer;
         const aiScene* scene = importer.ReadFile(animationPath, aiProcess_Triangulate);
         assert(scene && scene->mRootNode);
+        if (scene->mNumAnimations <= 0) {
+            return;
+        }
         auto animation = scene->mAnimations[0];
         m_Duration = animation->mDuration;
         m_TicksPerSecond = animation->mTicksPerSecond;
@@ -43,8 +46,7 @@ public:
         ReadMissingBones(animation, *model);
     }
 
-    ~Animation()
-    {
+    ~Animation() {
     }
 
     Bone* FindBone(const std::string& name)
@@ -109,8 +111,8 @@ private:
             dest.children.push_back(newData);
         }
     }
-    float m_Duration;
-    int m_TicksPerSecond;
+    float m_Duration{0.0};
+    int m_TicksPerSecond{0};
     std::vector<Bone> m_Bones;
     AssimpNodeData m_RootNode;
     std::map<std::string, BoneInfo> m_BoneInfoMap;

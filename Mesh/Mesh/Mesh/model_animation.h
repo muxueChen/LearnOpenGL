@@ -37,7 +37,7 @@ public:
     vector<Texture> textures_loaded;    // stores all the textures loaded so far, optimization to make sure textures aren't loaded more than once.
     vector<Mesh>    meshes;
     string directory;
-    bool gammaCorrection;
+    bool gammaCorrection{false};
     
     
 
@@ -61,7 +61,7 @@ public:
 private:
 
     std::map<string, BoneInfo> m_BoneInfoMap;
-    int m_BoneCounter = 0;
+    int m_BoneCounter{0};
 
     // loads a model with supported ASSIMP extensions from file and stores the resulting meshes in the meshes vector.
     void loadModel(string const &path)

@@ -99,7 +99,7 @@ int main(int argc, const char * argv[]) {
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
-
+        
         // input
         // -----
         processInput(window);
@@ -109,7 +109,7 @@ int main(int argc, const char * argv[]) {
         // ------
         glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
+        
         // don't forget to enable shader before setting uniforms
         ourShader.use();
         
@@ -117,11 +117,11 @@ int main(int argc, const char * argv[]) {
         glm::mat4 view = camera.GetViewMatrix();
         ourShader.setMat4("projection", projection);
         ourShader.setMat4("view", view);
-
+        
         auto transforms = animator.GetFinalBoneMatrices();
-        for (int i = 0; i < transforms.size(); ++i)
+        for (int i = 0; i < transforms.size(); ++i){
             ourShader.setMat4("finalBonesMatrices[" + std::to_string(i) + "]", transforms[i]);
-
+        }
 
         // render the loaded model
         glm::mat4 model = glm::mat4(1.0f);

@@ -27,8 +27,9 @@ public:
 
         m_FinalBoneMatrices.reserve(100);
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 100; i++) {
             m_FinalBoneMatrices.push_back(glm::mat4(1.0f));
+        }
     }
 
     void UpdateAnimation(float dt)
@@ -50,6 +51,7 @@ public:
 
     void CalculateBoneTransform(const AssimpNodeData* node, glm::mat4 parentTransform)
     {
+        
         std::string nodeName = node->name;
         glm::mat4 nodeTransform = node->transformation;
 
@@ -71,8 +73,10 @@ public:
             m_FinalBoneMatrices[index] = globalTransformation * offset;
         }
 
-        for (int i = 0; i < node->childrenCount; i++)
+        for (int i = 0; i < node->childrenCount; i++) {
             CalculateBoneTransform(&node->children[i], globalTransformation);
+        }
+            
     }
 
     std::vector<glm::mat4> GetFinalBoneMatrices()
