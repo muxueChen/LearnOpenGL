@@ -13,6 +13,7 @@
 
 class ShaderStreamInterface {
 public:
+    ~ShaderStreamInterface(){}
     virtual char *getVertexCode() = 0;
     
     virtual char *getFragmentCode() = 0;

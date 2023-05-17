@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FD98C961268D30C8001D720E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD98C960268D30C8001D720E /* main.cpp */; };
-		FD98C969268D3131001D720E /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98C968268D3131001D720E /* libglfw.3.3.dylib */; };
 		FD98C96B268D3144001D720E /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98C96A268D3144001D720E /* libGLEW.2.2.0.dylib */; };
 		FD98C96D268D314A001D720E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98C96C268D314A001D720E /* OpenGL.framework */; };
 		FD98C96F268D3150001D720E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98C96E268D3150001D720E /* CoreFoundation.framework */; };
@@ -16,6 +15,8 @@
 		FDB255E1271C10BD00ACDDC8 /* ShaderStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDB255C4271C10BC00ACDDC8 /* ShaderStream.cpp */; };
 		FDB255E2271C10BD00ACDDC8 /* stb_vorbis.c in Sources */ = {isa = PBXBuildFile; fileRef = FDB255CF271C10BC00ACDDC8 /* stb_vorbis.c */; };
 		FDB255E3271C10BD00ACDDC8 /* LamplightShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDB255DE271C10BC00ACDDC8 /* LamplightShader.cpp */; };
+		FDC82C542A134B450038162C /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC82C532A134B450038162C /* libglfw.3.3.dylib */; };
+		FDC82C552A134B450038162C /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = FDC82C532A134B450038162C /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,17 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		FDC82C562A134B450038162C /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FDC82C552A134B450038162C /* libglfw.3.3.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -68,6 +80,7 @@
 		FDB255DD271C10BC00ACDDC8 /* stb_ds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_ds.h; sourceTree = "<group>"; };
 		FDB255DE271C10BC00ACDDC8 /* LamplightShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LamplightShader.cpp; sourceTree = "<group>"; };
 		FDB255DF271C10BC00ACDDC8 /* ShaderStreamInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderStreamInterface.h; sourceTree = "<group>"; };
+		FDC82C532A134B450038162C /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC82C542A134B450038162C /* libglfw.3.3.dylib in Frameworks */,
 				FD98C96F268D3150001D720E /* CoreFoundation.framework in Frameworks */,
 				FD98C96D268D314A001D720E /* OpenGL.framework in Frameworks */,
-				FD98C969268D3131001D720E /* libglfw.3.3.dylib in Frameworks */,
 				FD98C96B268D3144001D720E /* libGLEW.2.2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +127,7 @@
 		FD98C967268D3131001D720E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDC82C532A134B450038162C /* libglfw.3.3.dylib */,
 				FD98C96E268D3150001D720E /* CoreFoundation.framework */,
 				FD98C96C268D314A001D720E /* OpenGL.framework */,
 				FD98C96A268D3144001D720E /* libGLEW.2.2.0.dylib */,
@@ -178,6 +192,7 @@
 				FD98C959268D30C8001D720E /* Sources */,
 				FD98C95A268D30C8001D720E /* Frameworks */,
 				FD98C95B268D30C8001D720E /* CopyFiles */,
+				FDC82C562A134B450038162C /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -355,9 +370,9 @@
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/usr/local/Cellar/glfw/3.3.4/lib,
+					/usr/local/Cellar/glfw/3.3.8/lib,
 					/usr/local/Cellar/glew/2.2.0_1/lib,
-					/usr/local/Cellar/assimp/5.0.1/lib,
+					/usr/local/Cellar/assimp/5.2.5/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -372,9 +387,9 @@
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/usr/local/Cellar/glfw/3.3.4/lib,
+					/usr/local/Cellar/glfw/3.3.8/lib,
 					/usr/local/Cellar/glew/2.2.0_1/lib,
-					/usr/local/Cellar/assimp/5.0.1/lib,
+					/usr/local/Cellar/assimp/5.2.5/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
