@@ -19,8 +19,7 @@
 #include "Camera.h"
 //#include "Model.h"
 #include "animator.h"
-#include "model_animation.h"
-
+#include "Model.h"
 
 #include <iostream>
 
@@ -86,15 +85,16 @@ int main(int argc, const char * argv[]) {
     // 着色器程序
     AnimationModelStream *shaderCode = new AnimationModelStream();
     Shader ourShader = Shader(shaderCode);
-    
+    const string path = "/Users/chenxueming/Desktop/LearnOpenGL/Mesh/Mesh/model/art/car_01_anim_appear.DAE";
 //    STDSSence::Model ourModel("/Users/chenxueming/Desktop/LearnOpenGL/Mesh/Mesh/model/art.scnassets/car_01_anim_appear.DAE");
 //    STDSSence::Animation danceAnimation("/Users/chenxueming/Desktop/LearnOpenGL/Mesh/Mesh/model/art.scnassets/car_01_anim_appear.DAE", &ourModel);
 //    STDSSence::Animator animator(&danceAnimation);
+    Model ourModel(path);
+    shared_ptr<Animation> danceAnimation = make_shared<Animation>(path, &ourModel);
+    auto animations = Animation::parseAnimation(path, &ourModel);
+    Animator animator(animations[1]);
+//    Animator animator(danceAnimation);
     
-    Model ourModel("/Users/chenxueming/Desktop/LearnOpenGL/Mesh/Mesh/model/art.scnassets/car_01_anim_appear.DAE");
-    Animation danceAnimation("/Users/chenxueming/Desktop/LearnOpenGL/Mesh/Mesh/model/art.scnassets/car_01_anim_appear.DAE", &ourModel);
-    Animator animator(&danceAnimation);
-
     while (!glfwWindowShouldClose(window)) {
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
@@ -126,9 +126,10 @@ int main(int argc, const char * argv[]) {
         // render the loaded model
         glm::mat4 model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(0.0f, -0.4f, 0.0f)); // translate it down so it's at the center of the scene
-        model = glm::scale(model, glm::vec3(.5f, .5f, .5f));    // it's a bit too big for our scene, so scale it down
+        model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));    // it's a bit too big for our scene, so scale it down
+//        model = glm::rotate(model, float(M_PI), glm::vec3(0.0, 1.0, 0.0));
         ourShader.setMat4("model", model);
-        ourModel.Draw(ourShader);
+        ourModel.Draw(ourShader, ourModel.textures_loaded[0].id);
 
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)

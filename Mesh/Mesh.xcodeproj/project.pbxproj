@@ -33,13 +33,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FD7AE6B92A148018007409D1 /* STDSBoneInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDSBoneInfo.h; sourceTree = "<group>"; };
-		FD7AE6BA2A148018007409D1 /* STDSBone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDSBone.h; sourceTree = "<group>"; };
-		FD7AE6BB2A148018007409D1 /* STDSAssimpGLMHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDSAssimpGLMHelpers.h; sourceTree = "<group>"; };
-		FD7AE6BD2A148018007409D1 /* STDS3DModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = STDS3DModel.hpp; sourceTree = "<group>"; };
-		FD7AE6BE2A148018007409D1 /* STDSAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDSAnimation.h; sourceTree = "<group>"; };
-		FD7AE6BF2A148018007409D1 /* STDS3DMesh.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = STDS3DMesh.hpp; sourceTree = "<group>"; };
-		FD7AE6C12A148127007409D1 /* STDSAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDSAnimator.h; sourceTree = "<group>"; };
 		FD7AE6C22A149FCA007409D1 /* AnimationModelStream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AnimationModelStream.cpp; sourceTree = "<group>"; };
 		FD7AE6C32A149FCA007409D1 /* AnimationModelStream.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AnimationModelStream.hpp; sourceTree = "<group>"; };
 		FD7AE7162A14C438007409D1 /* hand_showroom_refl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_showroom_refl.png; sourceTree = "<group>"; };
@@ -75,14 +68,17 @@
 		FD7AE7342A14C438007409D1 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
 		FD7AE7352A14C438007409D1 /* front.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = front.jpg; sourceTree = "<group>"; };
 		FD7AE7362A14C438007409D1 /* hand_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_dif.png; sourceTree = "<group>"; };
-		FD7AE7A22A14D56E007409D1 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		FD7AE7A52A14D91F007409D1 /* animator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = animator.h; sourceTree = "<group>"; };
 		FD7AE7A62A14D950007409D1 /* bone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bone.h; sourceTree = "<group>"; };
 		FD7AE7A72A14D976007409D1 /* assimp_glm_helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = assimp_glm_helpers.h; sourceTree = "<group>"; };
 		FD7AE7A82A14D9CD007409D1 /* animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = animation.h; sourceTree = "<group>"; };
 		FD7AE7A92A14DAB8007409D1 /* animdata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = animdata.h; sourceTree = "<group>"; };
-		FD7AE7AA2A14DB72007409D1 /* model_animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = model_animation.h; sourceTree = "<group>"; };
+		FD7AE7AA2A14DB72007409D1 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		FD7AE7AB2A14DC4F007409D1 /* mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mesh.h; sourceTree = "<group>"; };
+		FD7AE7AD2A15BCB5007409D1 /* car_01_anim_appear.DAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = car_01_anim_appear.DAE; sourceTree = "<group>"; };
+		FD7AE7AE2A15BCB5007409D1 /* car_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car_01.png; sourceTree = "<group>"; };
+		FD7AE7AF2A15BCB5007409D1 /* car_01_texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car_01_texture.jpg; sourceTree = "<group>"; };
+		FD7AE7B02A15BCB5007409D1 /* car_01_anim_go.DAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = car_01_anim_go.DAE; sourceTree = "<group>"; };
 		FDB2557F2714A0C400ACDDC8 /* Mesh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Mesh; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB255822714A0C400ACDDC8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FDB255892714A19500ACDDC8 /* container.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpeg; sourceTree = "<group>"; };
@@ -171,7 +167,7 @@
 		FD7AE7142A14C438007409D1 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				FD7AE7A22A14D56E007409D1 /* art.scnassets */,
+				FD7AE7AC2A15BCB5007409D1 /* art */,
 				FD7AE7152A14C438007409D1 /* nanosuit */,
 			);
 			path = model;
@@ -225,10 +221,21 @@
 				FD7AE7A72A14D976007409D1 /* assimp_glm_helpers.h */,
 				FD7AE7A82A14D9CD007409D1 /* animation.h */,
 				FD7AE7A92A14DAB8007409D1 /* animdata.h */,
-				FD7AE7AA2A14DB72007409D1 /* model_animation.h */,
+				FD7AE7AA2A14DB72007409D1 /* Model.h */,
 				FD7AE7AB2A14DC4F007409D1 /* mesh.h */,
 			);
 			path = Mesh;
+			sourceTree = "<group>";
+		};
+		FD7AE7AC2A15BCB5007409D1 /* art */ = {
+			isa = PBXGroup;
+			children = (
+				FD7AE7AF2A15BCB5007409D1 /* car_01_texture.jpg */,
+				FD7AE7AD2A15BCB5007409D1 /* car_01_anim_appear.DAE */,
+				FD7AE7AE2A15BCB5007409D1 /* car_01.png */,
+				FD7AE7B02A15BCB5007409D1 /* car_01_anim_go.DAE */,
+			);
+			path = art;
 			sourceTree = "<group>";
 		};
 		FDB255762714A0C400ACDDC8 = {
@@ -261,13 +268,6 @@
 				FDB2558A2714A19600ACDDC8 /* utils */,
 				FDB255822714A0C400ACDDC8 /* main.cpp */,
 				FDB255BC2715EC5500ACDDC8 /* Camera.h */,
-				FD7AE6BF2A148018007409D1 /* STDS3DMesh.hpp */,
-				FD7AE6BD2A148018007409D1 /* STDS3DModel.hpp */,
-				FD7AE6BE2A148018007409D1 /* STDSAnimation.h */,
-				FD7AE6BB2A148018007409D1 /* STDSAssimpGLMHelpers.h */,
-				FD7AE6C12A148127007409D1 /* STDSAnimator.h */,
-				FD7AE6BA2A148018007409D1 /* STDSBone.h */,
-				FD7AE6B92A148018007409D1 /* STDSBoneInfo.h */,
 			);
 			path = Mesh;
 			sourceTree = "<group>";

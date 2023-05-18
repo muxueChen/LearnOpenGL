@@ -14,7 +14,8 @@
 #include "bone.h"
 #include <functional>
 #include "animdata.h"
-#include "model_animation.h"
+#include "Model.h"
+#include <memory>
 
 struct AssimpNodeData
 {
@@ -27,6 +28,24 @@ struct AssimpNodeData
 class Animation
 {
 public:
+    
+    static vector<shared_ptr<Animation>> parseAnimation(const std::string& animationPath, Model* model) {
+        vector<shared_ptr<Animation>> list;
+        Assimp::Importer importer;
+        const aiScene* scene = importer.ReadFile(animationPath, aiProcess_Triangulate);
+        assert(scene && scene->mRootNode);
+        if (scene->mNumAnimations <= 0) {
+            return list;
+        }
+        for (int i = 0; i < scene->mNumAnimations; i ++) {
+            auto animation = scene->mAnimations[i];
+            auto anima = make_shared<Animation>(scene, animation, model);
+            list.push_back(anima);
+        }
+        return list;
+    }
+    
+    float m_CurrentTime{0.0};
     Animation() = default;
 
     Animation(const std::string& animationPath, Model* model)
@@ -37,7 +56,18 @@ public:
         if (scene->mNumAnimations <= 0) {
             return;
         }
-        auto animation = scene->mAnimations[0];
+        for (int i = 0; i < scene->mNumAnimations; i ++) {
+            auto animation = scene->mAnimations[i];
+            m_Duration = animation->mDuration;
+            m_TicksPerSecond = animation->mTicksPerSecond;
+            aiMatrix4x4 globalTransformation = scene->mRootNode->mTransformation;
+            globalTransformation = globalTransformation.Inverse();
+            ReadHierarchyData(m_RootNode, scene->mRootNode);
+            ReadMissingBones(animation, *model);
+        }
+    }
+    
+    Animation(const aiScene* scene, aiAnimation *animation, Model* model) {
         m_Duration = animation->mDuration;
         m_TicksPerSecond = animation->mTicksPerSecond;
         aiMatrix4x4 globalTransformation = scene->mRootNode->mTransformation;
@@ -45,9 +75,8 @@ public:
         ReadHierarchyData(m_RootNode, scene->mRootNode);
         ReadMissingBones(animation, *model);
     }
-
-    ~Animation() {
-    }
+    
+    ~Animation() {}
 
     Bone* FindBone(const std::string& name)
     {
@@ -71,6 +100,8 @@ public:
     }
 
 private:
+
+
     void ReadMissingBones(const aiAnimation* animation, Model& model)
     {
         int size = animation->mNumChannels;
